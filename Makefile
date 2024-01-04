@@ -1,7 +1,7 @@
 VERSION = 2.46
 PN = modprobed-db
 
-PREFIX ?= /usr
+PREFIX ?= /
 BINDIR = $(PREFIX)/bin
 DOCDIR = $(PREFIX)/share/doc/$(PN)-$(VERSION)
 MANDIR = $(PREFIX)/share/man/man8
