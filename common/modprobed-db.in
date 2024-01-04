@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # modprobed-db by graysky
 #
@@ -8,7 +8,7 @@
 # option.
 #
 VERS='@VERSION@'
-SKEL='/usr/share/modprobed-db/modprobed-db.skel'
+SKEL='../share/modprobed-db/modprobed-db.skel'
 
 if [[ ! -f $SKEL ]]; then
   echo "$SKEL is missing, please reinstall this package."

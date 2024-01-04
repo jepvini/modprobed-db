@@ -3,6 +3,12 @@ Modprobed-db is a useful utility for users wishing to build a minimal kernel via
 
 Modprobed-db simply logs every module ever probed on the target system to a text-based database (`$XDG_CONFIG_HOME/modprobed-db`) which can be read directly by "make localmodconfig" as described above.
 
+# Why this fork?
+This fork is used for making the package compatible with NixOs
+As the distro is not FHS-compliant, some changes are needed
+- `/usr/bin/env bash` instead if `/bin/bash`
+- the location of the `.skel` file is now relative as the `/usr/share` folder does not exists
+
 # Installation
 `$ make`
 
