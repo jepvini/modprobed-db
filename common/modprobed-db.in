@@ -7,8 +7,10 @@
 # perfect amount of modules compiled into your kernel via the make localmodconfig
 # option.
 #
-VERS='@VERSION@'
-SKEL='../share/modprobed-db/modprobed-db.skel'
+
+ROOT="$(dirname "$0")/.."
+VERS="@VERSION@"
+SKEL="$ROOT/share/modprobed-db/modprobed-db.skel"
 
 if [[ ! -f $SKEL ]]; then
   echo "$SKEL is missing, please reinstall this package."
@@ -39,7 +41,7 @@ XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOMEDIR/.config}"
 CFG_FILE="$XDG_CONFIG_HOME/modprobed-db.conf"
 
 # name change from modprobed_db --> modprobed-db so move existing configs
-[[ -f "$HOMEDIR/.config/modprobed_db.conf" ]] && 
+[[ -f "$HOMEDIR/.config/modprobed_db.conf" ]] &&
 mv "$HOMEDIR/.config/modprobed_db.conf" "$CFG_FILE"
 
 if [[ ! -f "$CFG_FILE" ]]; then
